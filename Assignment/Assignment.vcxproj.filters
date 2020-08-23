@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Exchange Currency.cpp">
+    <ClCompile Include="..\Multiplication Program.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
