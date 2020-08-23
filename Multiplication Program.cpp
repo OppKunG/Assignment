@@ -2,7 +2,7 @@
 #include<conio.h>
 int main()
 {
-	int in1,in2,out,ans,b;
+	int in,out,ans,b;
 	char ask[] = "Answer(number)";
 
 	printf("Start Program?\t1.Yes\t2.No\t%s : ", ask);
@@ -11,14 +11,21 @@ int main()
 	{
 		printf("\n\n--------------------------------------------------------------------------------\n|                  * *     *     *     ***     ***     *                       |\n|                  **      * * * *      *       *      *                       |\n|                  * *     *  *  *     ***      *      ****                    |");
 		printf("\n--------------------------------------------------------------------------------\n********************** Only Computer Engineer to do this ***********************");
-		printf("\n\n\t\t       *Multiplication Calculation Program*\n\t\t\t\t   Ver.1.0.0");
+		printf("\n\n\t\t       *Multiplication Calculation Program*\n\t\t\t\t   Ver.1.1.0");
 		printf("\nInput Number : ");
-		scanf_s("%d %d", &in1, &in2);
-		ans = in1 * in2;
-		printf("\n");
-		for (int i = 1; i <= 12; i++) {
-			out = ans * i;
-			printf("%d * %d = %d\n", ans, i, out);
+		scanf_s("%d", &in);
+		if (in == 1 || in == 0) 
+		{
+			printf("\nYou will do it yourself !!!\n");
+		}
+		else
+		{
+			printf("\n");
+			for (int i = 1; i <= 12; i++)
+			{
+				out = in * i;
+				printf("%d * %d = %d\n", in, i, out);
+			}
 		}
 		printf("\nTry again?\t1.Yes\t2.No\t%s : ", ask);
 		scanf_s("%d", &b);
