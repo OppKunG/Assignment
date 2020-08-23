@@ -12,7 +12,7 @@ int main()
 	{
 		printf("\n\n--------------------------------------------------------------------------------\n|                  * *     *     *     ***     ***     *                       |\n|                  **      * * * *      *       *      *                       |\n|                  * *     *  *  *     ***      *      ****                    |");
 		printf("\n--------------------------------------------------------------------------------\n********************** Only Computer Engineer to do this ***********************");
-		printf("\n\n\t\t\t    *Exchange Currency Program*\n\t\t\t\t      v.1.0.0");
+		printf("\n\n\t\t\t    *Exchange Currency Program*\n\t\t\t\t      v.3.0.0");
 		printf("\n***Choose your currency***\n\t1.Baht\t2.US Dollar\t3.Yen\n\nAnswer(number) : ");
 		scanf_s("%d", &c);
 		printf("\n***Choose currency to exchange***");
