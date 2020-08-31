@@ -6,7 +6,7 @@ int main()
 {
 	int p,d1,d2,c1,c2,c3,c4,b;
 	char ask[]="Answer(number)",pm[]="Perimeter",a[]="Area",sa[]="Surface Area",v[]="Volume";
-	float ans, w, l, r,s,h,pi=3.14159,s1,s2,s3,S,S1;
+	float ans, w, l, r,s,h,pi=3.14159,s1,s2,s3,S,S1,base;
 	
 	printf("Start Program?\t1.Yes\t2.No\t%s : ",ask);
 	scanf_s("%d", &b);
@@ -14,15 +14,15 @@ int main()
 	{
 		printf("\n\n--------------------------------------------------------------------------------\n|                  * *     *     *     ***     ***     *                       |\n|                  **      * * * *      *       *      *                       |\n|                  * *     *  *  *     ***      *      ****                    |");
 		printf("\n--------------------------------------------------------------------------------\n********************** Only Computer Engineer to do this ***********************");
-		printf("\n\n\t\t\t    *Geometry Formula Program*\n\t\t\t\t      v.3.5.0");
-		printf("\n\n\t\t\t1. 2D Dimension\t\t2. 3D Dimension\n%s : ",ask);
+		printf("\n\n\t\t\t    *Geometry Formula Program*\n\t\t\t\t      Ver.3.7.5");
+		printf("\n\n\t\t      1. 2D Dimension\t\t2. 3D Dimension\n%s : ",ask);
 		scanf_s("%d", &p);
 //2D Dimension
 		if (p == 1)
 		{
-			printf("\n***Choose Your Shape to calculate***\n\n\t\t1.Square\t2.Circle\t3.Rectangle\t4.Triangle\n%s : ",ask);
+			printf("\n***Choose Your Shape to calculate***\n\n1.Square\t2.Circle\t3.Rectangle\t4.Triangle\t5.Parallelogram\n\n%s : ",ask);
 			scanf_s("%d", &d1);
-			if (d1 == 1 || d1 == 3 || d1 == 4)
+			if (d1 == 1 || d1 == 3 || d1 == 4 || d1 == 5)
 			{
 				printf("\n***What your want to calculate***\n\n\t\t1.Perimeter\t2.Area\n%s : ",ask);
 				scanf_s("%d", &c1);
@@ -89,6 +89,33 @@ int main()
 						}
 					}
 				}
+//Parallelogram
+				if (d1 == 5)
+				{
+					printf("\nSide 1 : ");
+					scanf_s("%f", &s1);
+					printf("\nSide 2 : ");
+					scanf_s("%f", &s2);
+					printf("\nBase : ");
+					scanf_s("%f", &base);
+					printf("\nHeight : ");
+					scanf_s("%f", &h);
+					if (c1 == 1)
+					{
+						ans = (s1 + s2) * 2;
+						printf("\nParallelogram %s : %.2f\n", pm, ans);
+					}
+					if (c1 == 2)
+					{
+						if (base == s1 || base == s2)
+						{
+							ans = base * h;
+							printf("\nParallelogram %s : %.2f\n", a, ans);
+						}
+						
+					}
+				}
+
 			}
 //Circle
 			if (d1 == 2)
