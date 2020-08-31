@@ -3,8 +3,9 @@
 int main()
 {
 	int c, ex, b;
-	float m, us, yen, baht, won;
-	char total[] = "Total Exchange :",ask[] = "Answer(number) :", B[] = "Baht", US[] = "US Dollar", Y[] = "Yen", W[] = "Won";
+	float m, us, yen, baht, won, pound;
+	char	total[] = "Total Exchange :",ask[] = "Answer(number) :", 
+				B[] = "Baht", US[] = "US Dollar", Y[] = "Yen", W[] = "Won",P[] = "Pound Sterling";
 
 	printf("Start Program?\t1.Yes\t2.No\t%s ", ask);
 	scanf_s("%d", &b);
@@ -12,26 +13,30 @@ int main()
 	{
 		printf("\n\n--------------------------------------------------------------------------------\n|                  * *     *     *     ***     ***     *                       |\n|                  **      * * * *      *       *      *                       |\n|                  * *     *  *  *     ***      *      ****                    |");
 		printf("\n--------------------------------------------------------------------------------\n********************** Only Computer Engineer to do this ***********************");
-		printf("\n\n\t\t\t    *Exchange Currency Program*\n\t\t\t\t      v.3.5.0");
-		printf("\n***Choose your currency***\n\t1.%s\t2.%s\t3.%s\t4.%s\n\n%s ", B, US, Y, W, ask);
+		printf("\n\n\t\t\t    *Exchange Currency Program*\n\t\t\t\t      Ver.4.0.0\n\t\t\t\t\t\t\t(Latest Update 31/08/20)");
+		printf("\n\n***Choose your currency***\n\t1.%s\t2.%s\t3.%s\t4.%s\t5.%s\n\n%s ", B, US, Y, W, P, ask);
 		scanf_s("%d", &c);
 		printf("\n***Choose currency to exchange***");
 
 		if (c == 1)
 		{
-			printf("\n\t1.%s\t2.%s\t3.%s", US, Y, W);
+			printf("\n\t1.%s\t2.%s\t3.%s\t4.%s", US, Y, W, P);
 		}
 		if (c == 2)
 		{
-			printf("\n\t1.%s\t2.%s\t3.%s", B, Y, W);
+			printf("\n\t1.%s\t2.%s\t3.%s\t4.%s", B, Y, W, P);
 		}
 		if (c == 3)
 		{
-			printf("\n\t1.%s\t2.%s\t3.%s", B, US, W);
+			printf("\n\t1.%s\t2.%s\t3.%s\t4.%s", B, US, W, P);
 		}
 		if (c == 4)
 		{
-			printf("\n\t1.%s\t2.%s\t3.%s", B, US, Y);
+			printf("\n\t1.%s\t2.%s\t3.%s\t4.%s", B, US, Y, P);
+		}
+		if (c == 5)
+		{
+			printf("\n\t1.%s\t2.%s\t3.%s\t4.%s", B, US, Y, W);
 		}
 
 		printf("\n\n%s ", ask);
@@ -50,12 +55,17 @@ int main()
 
 			if (ex == 2)
 			{
-				yen = m * 3.42;
+				yen = m * 3.41;
 			}
 
 			if (ex == 3)
 			{
-				won = m * 37.95;
+				won = m * 38.2;
+			}
+
+			if (ex == 4)
+			{
+				pound = m * 0.024;
 			}
 		}
 
@@ -64,17 +74,22 @@ int main()
 		{
 			if (ex == 1)
 			{
-				baht = m * 31.10;
+				baht = m * 31.06;
 			}
 
 			if (ex == 2)
 			{
-				yen = m * 106.52;
+				yen = m * 105.99;
 			}
 
 			if (ex == 3)
 			{
-				won = m * 1180.61;
+				won = m * 1186.18;
+			}
+
+			if (ex == 4)
+			{
+				pound = m * 0.75;
 			}
 		}
 
@@ -93,7 +108,12 @@ int main()
 
 			if (ex == 3)
 			{
-				won = m * 11.21;
+				won = m * 11.19;
+			}
+
+			if (ex == 4)
+			{
+				pound = m * 0.0071;
 			}
 		}
 
@@ -107,34 +127,68 @@ int main()
 
 			if (ex == 2)
 			{
-				us = m * 0.00085;
+				us = m * 0.00084;
 			}
 
 			if (ex == 3)
 			{
 				yen = m * 0.089;
 			}
+
+			if (ex == 4)
+			{
+				pound = m * 0.00063;
+			}
+		}
+
+		//Pound Sterling to...
+		if (c == 5)
+		{
+			if (ex == 1)
+			{
+				baht = m * 41.39;
+			}
+
+			if (ex == 2)
+			{
+				us = m * 1.33;
+			}
+
+			if (ex == 3)
+			{
+				yen = m * 141.24;
+			}
+
+			if (ex == 4)
+			{
+				won = m * 1580.38;
+			}
 		}
 
 		//Total Exchange
-		if ((c == 1 && ex == 1) || (c == 3 && ex == 2) || (c == 4 && ex == 2))
+		if ((c == 2 && ex == 1) || (c == 3 && ex == 1) || (c == 4 && ex == 1) || (c == 5 && ex == 1))
+		{
+			printf("\n%s %f %s\n", total, baht, B);
+		}
+		
+		if ((c == 1 && ex == 1) || (c == 3 && ex == 2) || (c == 4 && ex == 2) || (c == 5 && ex == 2))
 		{
 			printf("\n%s %f %s\n", total,us, US);
 		}
 
-		if ((c == 1 && ex == 2) || (c == 2 && ex == 2) || (c == 4 && ex == 3))
+		if ((c == 1 && ex == 2) || (c == 2 && ex == 2) || (c == 4 && ex == 3) || (c == 5 && ex == 3))
 		{
 			printf("\n%s %f %s\n", total,yen, Y);
 		}
-
-		if ((c == 2 && ex == 1) || (c == 3 && ex == 1) || (c == 4 && ex == 1))
-		{
-			printf("\n%s %f %s\n", total,baht, B);
-		}
-
-		if ((c == 1 && ex == 3) || (c == 2 && ex == 3) || (c == 3 && ex == 3))
+				
+		if ((c == 1 && ex == 3) || (c == 2 && ex == 3) || (c == 3 && ex == 3) || (c == 5 && ex == 4))
 		{
 			printf("\n%s %f %s\n", total,won, W);
+		}
+
+		if ((c == 1 && ex == 4) || (c == 2 && ex == 4) || (c == 3 && ex == 4) || (c == 4 && ex == 4))
+		{
+			printf("\n%s %f %s\n", total, pound, P);
 		}
 
 		printf("\nTry again?\t1.Yes\t2.No\t%s ", ask);
