@@ -24,7 +24,7 @@ void Intro()
 {
 	printf("\n\n--------------------------------------------------------------------------------\n|                  * *     *     *     ***     ***     *                       |\n|                  **      * * * *      *       *      *                       |\n|                  * *     *  *  *     ***      *      ****                    |");
 	printf("\n--------------------------------------------------------------------------------\n********************** Only Computer Engineer to do this ***********************");
-	printf("\n\n\t\t\t    *Trigonometry Program*\n\t\t\t\t   ver.Beta\n");
+	printf("\n\n\t\t       *Trigonometry Calculation Program*\n\t\t\t\t   ver.Beta\n");
 }
 
 int Check_Right_Triangle(int a, int b, int c)
