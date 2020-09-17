@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Multiplication Program.cpp">
+    <ClCompile Include="Trigonometry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
