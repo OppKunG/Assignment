@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Palindrome.cpp">
+    <ClCompile Include="..\Geometry Formula.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
