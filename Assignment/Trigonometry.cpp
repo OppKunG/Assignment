@@ -2,20 +2,27 @@
 #include<math.h>
 
 char In[] = "Input 3 sides : ";
+int* p;
 
 void Intro(void);
-int Check_Right_Triangle(int, int, int);
-void Trigonometry(int, int, int);
+int Check_Right_Triangle(void);
+void Trigonometry(void);
 
 int main()
 {
-	int a, b, c,check;
+	int in, a[4], check, i = 0;
 	Intro();
 	printf("%s", In);
-	scanf_s("%d %d %d", &a, &b, &c);
-	check = Check_Right_Triangle(a, b, c);
+	while (i<3)
+	{
+		scanf_s("%d", &in);
+		a[i] = in;
+		i++;
+	}
+	p = a;
+	check = Check_Right_Triangle();
 	if (check==1)
-		Trigonometry(a,b,c);
+		Trigonometry();
 	return 0;
 }
 
@@ -27,9 +34,10 @@ void Intro()
 	printf("\n\n\t\t       *Trigonometry Calculation Program*\n\t\t\t\t   ver.Beta\n");
 }
 
-int Check_Right_Triangle(int a, int b, int c)
+int Check_Right_Triangle()
 {
-	int max, check1, check2;
+	int max, check1, check2, a = p[0], b = p[1], c = p[2];
+
 	if (a > b && a > c)
 		max = a;
 	else if (b > a && b > c) 
@@ -46,9 +54,11 @@ int Check_Right_Triangle(int a, int b, int c)
 		return 0;
 }
 
-void Trigonometry(int a, int b, int c)
+void Trigonometry()
 {
-	float opp,adj,hyp,sum;
+	float opp, adj, hyp, sum;
+	int a = p[0], b = p[1], c = p[2];
+
 	if (a > b && a > c)
 		hyp = a;
 	else if (b > a && b > c)
