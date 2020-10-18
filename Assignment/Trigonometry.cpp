@@ -2,7 +2,7 @@
 #include<math.h>
 
 char In[] = "Input 3 sides : ";
-int* p;
+char* p, a[50];
 
 void Intro(void);
 int Check_Right_Triangle(void);
@@ -10,13 +10,14 @@ void Trigonometry(void);
 
 int main()
 {
-	int in, a[4], check, i = 0;
+	int in, check, i = 0;
 	Intro();
 	printf("%s", In);
 	while (i<3)
 	{
 		scanf_s("%d", &in);
-		a[i] = in;
+		if (in < 10)	a[i] = in;
+		else a[i] + a[i + 1] = in;
 		i++;
 	}
 	p = a;
@@ -36,7 +37,13 @@ void Intro()
 
 int Check_Right_Triangle()
 {
-	int max, check1, check2, a = p[0], b = p[1], c = p[2];
+	int max, check1, check2, a, b, c, i = 0;
+
+	for (i = p[i]; i != '\0'; i++)	a = i;
+	i += 1;
+	for (i = p[i]; i != '\0'; i++)	b = i;
+	i += 1;
+	for (i = p[i]; i != '\0'; i++)	c = i;
 
 	if (a > b && a > c)
 		max = a;
@@ -57,7 +64,13 @@ int Check_Right_Triangle()
 void Trigonometry()
 {
 	float opp, adj, hyp, sum;
-	int a = p[0], b = p[1], c = p[2];
+	int a, b, c, i = 0;
+
+	for (i = p[i]; i != '\0'; i++)	a = i;
+	i += 1;
+	for (i = p[i]; i != '\0'; i++)	b = i;
+	i += 1;
+	for (i = p[i]; i != '\0'; i++)	c = i;
 
 	if (a > b && a > c)
 		hyp = a;
