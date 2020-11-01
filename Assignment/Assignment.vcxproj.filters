@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Desktop\Solve Quadratic Equations.cpp">
+    <ClCompile Include="Direction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
