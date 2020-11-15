@@ -9,11 +9,17 @@ void Skyscrapers()
 	{
 		scanf_s("%d", &h);
 
-		if (h - c > 0)
-			count++;
+		if (h == 0 || h < -1)
+			printf("Wrong Height\nTry again !!!\n");
 		
-		if (h > c)
-			c = h;
+		else 
+		{
+			if (h - c > 0)
+				count++;
+
+			if (h > c)
+				c = h;
+		}
 
 	} while (h != -1);
 
