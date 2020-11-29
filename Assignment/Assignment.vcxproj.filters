@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Array 2D.cpp">
+    <ClCompile Include="Digit Sum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
