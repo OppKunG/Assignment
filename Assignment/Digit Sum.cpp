@@ -1,13 +1,13 @@
 #include<stdio.h>
 
-int main()
+void DigitSum()
 {
 	char str[100], * ch;
 	int sum = 0;
 	int i = 0;
 
 	printf(" *** 80-digit summation ***\nEnter a number string : ");
-	scanf_s("%s", &str,99);
+	scanf_s("%s", &str, 99);
 
 	ch = str;
 
@@ -38,7 +38,10 @@ int main()
 	}
 
 	printf("sum = %d\n", sum);
+}
 
+int main()
+{
+	DigitSum();
 	return 0;
-
 }
